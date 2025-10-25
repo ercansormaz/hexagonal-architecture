@@ -1,4 +1,4 @@
-# 🧩 Hexagonal Architecture with Spring Boot — Calculator Example
+# Hexagonal Architecture with Spring Boot — Calculator Example
 
 ## 📘 Overview
 
@@ -209,12 +209,19 @@ curl --location 'http://localhost:8080/SOAP/CalculatorService' \
 
 ---
 
-## 🧩 Conclusion
+## 🎯 Conclusion
 
 This project serves as a **hands-on example** for understanding Hexagonal Architecture with **Spring
 Boot**.  
 It demonstrates how clean modularization allows multiple interfaces (REST, SOAP) to coexist while
 keeping the domain logic independent and reusable.
+
+---
+
+## 📚 Further Reading
+You can read a detailed explanation of this project in the blog post here:  
+👉 [Read the Blog Post](https://ercan.dev/blog/notes/spring-boot-hexagonal-architecture-example)
+
 
 ---
 
