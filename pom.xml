@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+  <modelVersion>4.0.0</modelVersion>
+
+  <parent>
+    <groupId>org.springframework.boot</groupId>
+    <artifactId>spring-boot-starter-parent</artifactId>
+    <version>3.5.7</version>
+    <relativePath/> <!-- lookup parent from repository -->
+  </parent>
+
+  <groupId>dev.ercan</groupId>
+  <artifactId>hexagonal-architecture</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <packaging>pom</packaging>
+
+  <name>hexagonal-architecture</name>
+  <description>
+    Spring Boot project demonstrating Hexagonal Architecture with both REST and SOAP
+    adapters for a simple calculator domain.
+  </description>
+  <url>https://github.com/ercansormaz/hexagonal-architecture</url>
+
+  <developers>
+    <developer>
+      <name>Ercan SORMAZ</name>
+      <email>me@ercan.dev</email>
+      <url>https://github.com/ercansormaz</url>
+      <properties>
+        <gpg>0x4C6B131C812FC43A</gpg>
+        <linkedin>https://www.linkedin.com/in/ercansormaz/</linkedin>
+      </properties>
+    </developer>
+  </developers>
+
+  <properties>
+    <java.version>21</java.version>
+  </properties>
+
+  <build>
+    <finalName>${project.name}</finalName>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <configuration>
+          <annotationProcessorPaths>
+            <path>
+              <groupId>org.projectlombok</groupId>
+              <artifactId>lombok</artifactId>
+            </path>
+          </annotationProcessorPaths>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
+
+  <modules>
+    <module>domain</module>
+    <module>application</module>
+    <module>infrastructure</module>
+    <module>rest-api-adapter</module>
+    <module>soap-service-adapter</module>
+  </modules>
+
+</project>
