@@ -12,7 +12,7 @@ import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 @EntityScan(basePackages = "dev.ercan.poc.hexagonal")
 public class SoapServiceAdapterApplication {
 
-  public static void main(String[] args) {
+  static void main(String[] args) {
     SpringApplication.run(SoapServiceAdapterApplication.class, args);
   }
 

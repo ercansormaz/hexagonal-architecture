@@ -13,7 +13,7 @@ import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 @EntityScan(basePackages = "dev.ercan.poc.hexagonal")
 public class RestApiAdapterApplication {
 
-  public static void main(String[] args) {
+  static void main(String[] args) {
     SpringApplication.run(RestApiAdapterApplication.class, args);
   }
 
