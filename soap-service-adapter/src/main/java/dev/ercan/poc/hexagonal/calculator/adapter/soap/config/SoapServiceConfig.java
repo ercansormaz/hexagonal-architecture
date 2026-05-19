@@ -13,7 +13,7 @@ import org.springframework.context.annotation.Configuration;
 public class SoapServiceConfig {
 
   @Bean
-  public ServletRegistrationBean<SoapServiceServlet> soapServiceServlet() {
+  ServletRegistrationBean<SoapServiceServlet> soapServiceServlet() {
     SoapServiceServlet soapWsServlet = new SoapServiceServlet();
     ServletRegistrationBean<SoapServiceServlet> bean = new ServletRegistrationBean<>(soapWsServlet);
     bean.setLoadOnStartup(1);
@@ -21,12 +21,12 @@ public class SoapServiceConfig {
   }
 
   @Bean
-  public CalculatorSoapService calculatorSoapService(CalculateUseCase calculateUseCase) {
+  CalculatorSoapService calculatorSoapService(CalculateUseCase calculateUseCase) {
     return new CalculatorSoapService(calculateUseCase);
   }
 
   @Bean
-  public SoapServiceBinding calculatorServiceBinding(CalculatorSoapService calculatorSoapService)
+  SoapServiceBinding calculatorServiceBinding(CalculatorSoapService calculatorSoapService)
       throws Exception {
     SoapServiceFactory soapServiceFactory = new SoapServiceFactory();
     soapServiceFactory.setBean(calculatorSoapService);

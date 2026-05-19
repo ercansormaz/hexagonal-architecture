@@ -11,12 +11,12 @@ import org.springframework.context.annotation.Configuration;
 public class BeanConfig {
 
   @Bean
-  public CalculatorService calculatorService() {
+  CalculatorService calculatorService() {
     return new CalculatorService();
   }
 
   @Bean
-  public CalculateUseCase calculateUseCase(CalculatorService calculatorService,
+  CalculateUseCase calculateUseCase(CalculatorService calculatorService,
       CalculationLogger calculationLogger) {
     return new CalculateUseCaseImpl(calculatorService, calculationLogger);
   }
